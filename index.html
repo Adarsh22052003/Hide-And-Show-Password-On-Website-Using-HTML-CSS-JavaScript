@@ -9,7 +9,21 @@
 <body>
     <div class="container">
         <input type="password" placeholder="password" id="password">
-        <img src="eye-close.png" id="eyeclose">
+        <img src="eye-close.png" id="eyeclose" onclick="showPassword()">
     </div>
+    <script>
+        const password = document.getElementById("password");
+        const eyeclose = document.getElementById("eyeclose");
+
+        function showPassword(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyeclose.src = "eye-open.png";
+            }else{
+                password.type = "password"
+                eyeclose.src = "eye-close.png";
+            }
+        }
+    </script>
 </body>
 </html>
